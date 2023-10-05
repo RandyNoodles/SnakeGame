@@ -26,13 +26,13 @@
 		}
 		printf("\n");
 		//Draw Sides
-		for (int i = 1; i < ySize; i++) {
+		for (int i = 2; i < ySize; i++) {
 			printf("#");
 			moveCursor(xSize, i);
 			printf("#\n");
 		}
 		//Draw Bottom Border
-		for (int i = 0; i <= xSize; i++) {
+		for (int i = 0; i < xSize; i++) {
 			printf("#");
 		}
 	}

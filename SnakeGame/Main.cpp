@@ -7,6 +7,18 @@ TODO:
 - NO_FOOD_LIMIT doesn't seem to be being enforced by the generateNewFood() function
 
 - Note - Map needs to be super small for laptop
+
+
+X/Y Offset:
+Apparently the first line in the console is actually line 1 for each axis. I've been treating it as 0
+This has implications for:
+	- Collision 
+	- Map Drawing?
+	- Where food can spawn
+
+	TEST: is 0,0 different than 1,1?
+	Answer: Nope. They both indicate the top lefthand corner.
+	
 */
 
 #define WIN 1
@@ -16,6 +28,9 @@ TODO:
 
 int main(void) {
 	
+
+
+
 	//Init Clockspeed
 	int clockSpeed = DEFAULT_CLOCKSPEED;
 	//Init Clock
@@ -36,7 +51,10 @@ int main(void) {
 	player.drawSnake();
 	food.drawFood();
 
-	
+
+
+
+
 	int playerInput = -1;
 	int foodCollisionFlag = 0;
 	int mapCollisionFlag = 0;
@@ -45,6 +63,9 @@ int main(void) {
 	int gameStatus = CONTINUE;
 
 	while (gameStatus == CONTINUE) {
+
+
+
 		//Check for input
 		playerInput = checkInput();
 		//If input detected, change player direction
@@ -64,12 +85,21 @@ int main(void) {
 				player.addLength();
 			}
 
-			mapCollisionFlag = checkMapCollision(player.getSnakeHeadLocation, map.getSize_X(), map.getSize_Y());
+			mapCollisionFlag = checkMapCollision(player.getSnakeHeadLocation(), map.getSize_X(), map.getSize_Y());
 			if (mapCollisionFlag == TRUE) {
-				//GameStatus to LOSE
+				gameStatus = LOSE;
 			}
+			printSnakeCoords(player.getSnakeHeadLocation().x, player.getSnakeHeadLocation().y, map.getSize_X());
+			printFoodCoords(food.getLocation().x, food.getLocation().y, map.getSize_X());
+			printMapSize(map.getSize_X(), map.getSize_Y());
+			printf("\t Game Status: %d", gameStatus);
 		}
-		
+	}
+
+	if (gameStatus == LOSE) {
+		clearScreen();
+		moveCursor(0, 0);
+		printf("YOU DIED.\n\n");
 	}
 	//AFTER WHILE LOOP
 	//Clear screen

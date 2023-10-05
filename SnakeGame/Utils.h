@@ -23,7 +23,7 @@
 
 
 //# of Milliseconds per tick
-#define DEFAULT_CLOCKSPEED 300
+#define DEFAULT_CLOCKSPEED 750
 
 
 
@@ -70,5 +70,14 @@ void moveCursor(int x, int y);
 //Clears visible screen
 void clearScreen(void);
 
+/*
+	Description		: Print the coords of each object
+
+	Parameters		: x, y coordinates to display.
+	Return Value	: Void
+*/
+void printSnakeCoords(int x, int y, int mapSize_X);
+void printFoodCoords(int x, int y, int mapSize_X);
+void printMapSize(int mapSize_X, int mapSize_Y);
 
 #endif

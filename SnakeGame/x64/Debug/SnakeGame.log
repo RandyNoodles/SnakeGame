@@ -1,0 +1,11 @@
+﻿  Main.cpp
+C:\Users\joshr\source\repos\SnakeGame\SnakeGame\Utils.h(33,2): warning C4091: 'typedef ': ignored on left of 'Coord' when no variable is declared
+C:\Users\joshr\source\repos\SnakeGame\SnakeGame\Snake.h(114,2): warning C4091: 'typedef ': ignored on left of 'Snake' when no variable is declared
+C:\Users\joshr\source\repos\SnakeGame\SnakeGame\Food.h(60,2): warning C4091: 'typedef ': ignored on left of 'Food' when no variable is declared
+C:\Users\joshr\source\repos\SnakeGame\SnakeGame\Map.h(39,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
+  Map.cpp
+C:\Users\joshr\source\repos\SnakeGame\SnakeGame\Utils.h(33,2): warning C4091: 'typedef ': ignored on left of 'Coord' when no variable is declared
+C:\Users\joshr\source\repos\SnakeGame\SnakeGame\Map.h(39,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
+  Generating Code...
+C:\Users\joshr\source\repos\SnakeGame\SnakeGame\Food.h(32): warning C4715: 'Food::newFood': not all control paths return a value
+  SnakeGame.vcxproj -> C:\Users\joshr\source\repos\SnakeGame\x64\Debug\SnakeGame.exe
