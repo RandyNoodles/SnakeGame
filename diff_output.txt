@@ -1,0 +1,26 @@
+diff --git a/.vs/SnakeGame/FileContentIndex/3082fe3f-48b5-452f-b62a-307ef35986b8.vsidx b/.vs/SnakeGame/FileContentIndex/3082fe3f-48b5-452f-b62a-307ef35986b8.vsidx
+deleted file mode 100644
+index 3415fab..0000000
+Binary files a/.vs/SnakeGame/FileContentIndex/3082fe3f-48b5-452f-b62a-307ef35986b8.vsidx and /dev/null differ
+diff --git a/.vs/SnakeGame/v17/.suo b/.vs/SnakeGame/v17/.suo
+index acd7a39..2d16492 100644
+Binary files a/.vs/SnakeGame/v17/.suo and b/.vs/SnakeGame/v17/.suo differ
+diff --git a/.vs/SnakeGame/v17/Browse.VC.db b/.vs/SnakeGame/v17/Browse.VC.db
+index 7a9d653..2cf5755 100644
+Binary files a/.vs/SnakeGame/v17/Browse.VC.db and b/.vs/SnakeGame/v17/Browse.VC.db differ
+diff --git a/.vs/SnakeGame/v17/ipch/AutoPCH/a1cf3b3598221ec4/MAIN.ipch b/.vs/SnakeGame/v17/ipch/AutoPCH/a1cf3b3598221ec4/MAIN.ipch
+index 0c1b031..f4bf2d1 100644
+Binary files a/.vs/SnakeGame/v17/ipch/AutoPCH/a1cf3b3598221ec4/MAIN.ipch and b/.vs/SnakeGame/v17/ipch/AutoPCH/a1cf3b3598221ec4/MAIN.ipch differ
+diff --git a/SnakeGame/Main.cpp b/SnakeGame/Main.cpp
+index 0144201..346dec2 100644
+--- a/SnakeGame/Main.cpp
++++ b/SnakeGame/Main.cpp
+@@ -1,7 +1,7 @@
+ /*
+ 	FILE			: Main.cpp
+ 	Project			: Personal - SnakeGame
+-	Programmer		: Josh Rice
++	Programmer		: Josh Rice - 6781041
+ 	First Version	: 2023-09-16
+ 	Description		:
+ 		Game of snake we all know and love. This is a means for me to try and brush off the rust.

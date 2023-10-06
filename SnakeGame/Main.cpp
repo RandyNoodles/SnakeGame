@@ -1,7 +1,7 @@
 /*
 	FILE			: Main.cpp
 	Project			: Personal - SnakeGame
-	Programmer		: Josh Rice
+	Programmer		: Josh Rice - 6781041
 	First Version	: 2023-09-16
 	Description		:
 		Game of snake we all know and love. This is a means for me to try and brush off the rust.
