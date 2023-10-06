@@ -75,3 +75,24 @@ void printMapSize(int mapSize_X, int mapSize_Y) {
 	moveCursor(mapSize_X + 10, 3);
 	printf("Map Size:\tX: %d | Y: %d", mapSize_X, mapSize_Y);
 }
+
+void drawSkull() {
+	printf("\t      .-------.\n");
+	printf("\t    .'        '.\n");
+	printf("\t   /   O      O \\ \n");
+	printf("\t  :           `  :\n");
+	printf("\t  |,  .-.  .-.  ,|\n");
+	printf("\t  | )(__/  \\__) (|\n");
+	printf("\t  |/     /\\     \\|\n");
+	printf("\t   (_    ^^    _)\n");
+	printf("\t     \\ |IIII| /\n");
+	printf("\t      \\ IIII / \n");
+	printf("\t       \\----/\n");
+}
+void drawGameOver() {
+	printf("  #####     #     #    # #####    ###  #     # ###### ####\n");
+	printf("  #        # #    ##  ## #       #   # #     # #      #   #\n");
+	printf("  #  ##   #####   # #  # ###     #   #  #   #  ###    ###\n");
+	printf("  #   #  #     #  #    # #       #   #   # #   #      #  #\n");
+	printf("  ##### #       # #    # ####     ###     #    #####  #   #\n");
+}

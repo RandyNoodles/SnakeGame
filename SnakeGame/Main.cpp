@@ -1,3 +1,14 @@
+/*
+	FILE			: Main.cpp
+	Project			: Personal - SnakeGame
+	Programmer		: Josh Rice
+	First Version	: 2023-09-16
+	Description		:
+		Game of snake we all know and love. This is a means for me to try and brush off the rust.
+
+*/
+
+
 #pragma once
 #include "Main.h"
 
@@ -98,8 +109,10 @@ int main(void) {
 
 	if (gameStatus == LOSE) {
 		clearScreen();
-		moveCursor(0, 0);
-		printf("YOU DIED.\n\n");
+		moveCursor(1, 5);
+		drawSkull();
+		printf("\n\n\n\n");
+		drawGameOver();
 	}
 	//AFTER WHILE LOOP
 	//Clear screen

@@ -80,4 +80,6 @@ void printSnakeCoords(int x, int y, int mapSize_X);
 void printFoodCoords(int x, int y, int mapSize_X);
 void printMapSize(int mapSize_X, int mapSize_Y);
 
+void drawSkull();
+void drawGameOver();
 #endif
