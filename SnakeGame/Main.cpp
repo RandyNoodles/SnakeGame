@@ -14,8 +14,7 @@
 
 /*
 TODO:
-- Collision for walls & self
-- NO_FOOD_LIMIT doesn't seem to be being enforced by the generateNewFood() function
+- Make it so the display in the top right clears the line before writing the new one
 
 - Note - Map needs to be super small for laptop
 
@@ -39,7 +38,8 @@ This has implications for:
 
 int main(void) {
 	
-
+	//Init Rand
+	srand((unsigned int)time(NULL));
 
 
 	//Init Clockspeed
@@ -47,6 +47,7 @@ int main(void) {
 	//Init Clock
 	clock_t gameClock;
 	gameClock = clock();
+	
 
 	//Init all elements
 	Map map;
@@ -67,8 +68,10 @@ int main(void) {
 
 
 	int playerInput = -1;
+
 	int foodCollisionFlag = 0;
 	int mapCollisionFlag = 0;
+	int selfCollisionFlag = 0;
 
 	int tickElapsedFlag = FALSE;
 	int gameStatus = CONTINUE;
@@ -99,8 +102,18 @@ int main(void) {
 			mapCollisionFlag = checkMapCollision(player.getSnakeHeadLocation(), map.getSize_X(), map.getSize_Y());
 			if (mapCollisionFlag == TRUE) {
 				gameStatus = LOSE;
+				break;
 			}
+
+			selfCollisionFlag = checkSelfCollision(player.getSnakeHeadLocation(), player.getBody(), player.getLength());
+			if (selfCollisionFlag == TRUE) {
+				gameStatus = LOSE;
+				break;
+			}
+
+
 			printSnakeCoords(player.getSnakeHeadLocation().x, player.getSnakeHeadLocation().y, map.getSize_X());
+			//printSnakeBodyCoords(player.getBody(), player.getLength(), map.getSize_X());
 			printFoodCoords(food.getLocation().x, food.getLocation().y, map.getSize_X());
 			printMapSize(map.getSize_X(), map.getSize_Y());
 			printf("\t Game Status: %d", gameStatus);

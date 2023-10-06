@@ -10,7 +10,7 @@
 #define DEFAULT_MAP_SIZE_Y 30
 
 //No food appears in these borders
-#define NO_FOOD_MARGIN 5
+#define NO_FOOD_MARGIN 12
 
 //Lowercase ASCII values for WASD
 #define NORTH 119
@@ -23,7 +23,7 @@
 
 
 //# of Milliseconds per tick
-#define DEFAULT_CLOCKSPEED 750
+#define DEFAULT_CLOCKSPEED 300
 
 
 
@@ -49,6 +49,14 @@ int checkFoodCollision(Coord snakeHeadLocation, Coord foodLocation);
 */
 int checkMapCollision(Coord snakeHeadLocation, int mapSize_X, int mapSize_Y);
 
+/*
+	Description		: Checks if user has collided with their own body
+
+	Parameters		: Coord snakeHeadLocation - Retrieved via getSnakeHeadLocation
+					  Coord* snakeBodyArray - Retrieved via getBody
+	Return Value	: 1 if collision has occurred, else 0
+*/
+int checkSelfCollision(Coord snakeHeadLocation, Coord* snakeBodyArray, int length);
 
 
 /*
@@ -77,6 +85,7 @@ void clearScreen(void);
 	Return Value	: Void
 */
 void printSnakeCoords(int x, int y, int mapSize_X);
+void printSnakeBodyCoords(Coord* body, int length, int mapSize_X);
 void printFoodCoords(int x, int y, int mapSize_X);
 void printMapSize(int mapSize_X, int mapSize_Y);
 

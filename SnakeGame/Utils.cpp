@@ -27,6 +27,21 @@ int checkMapCollision(Coord snakeHeadLocation, int mapSize_X, int mapSize_Y) {
 	return collisionStatus;
 }
 
+int checkSelfCollision(Coord snakeHeadLocation, Coord* snakeBodyArray , int length) {
+	int collisionStatus = FALSE;
+
+	//Loop through starting from index 1 to avoid checking head coord against itself
+	for (int i = 1; i < length; i++) {
+		if (snakeBodyArray[i].x == snakeHeadLocation.x) {
+			if (snakeBodyArray[i].y == snakeHeadLocation.y) {
+				collisionStatus = TRUE;
+			}
+		}
+	}
+
+	return collisionStatus;
+}
+
 
 
 
@@ -67,12 +82,22 @@ void printSnakeCoords(int x, int y, int mapSize_X) {
 	moveCursor(mapSize_X + 10, 1);
 	printf("Snake:\t(%d, %d)", x, y);
 }
-void printFoodCoords(int x, int y, int mapSize_X) {
+
+void printSnakeBodyCoords(Coord* body, int length, int mapSize_X) {
 	moveCursor(mapSize_X + 10, 2);
+	printf("Body:\t [ ");
+	for (int i = 0; i < length; i++) {
+		printf("(%d,%d), ", body[i].x, body[i].y);
+	}
+	printf("]");
+}
+
+void printFoodCoords(int x, int y, int mapSize_X) {
+	moveCursor(mapSize_X + 10, 3);
 	printf("Food:\t(%d, %d)", x, y);
 }
 void printMapSize(int mapSize_X, int mapSize_Y) {
-	moveCursor(mapSize_X + 10, 3);
+	moveCursor(mapSize_X + 10, 4);
 	printf("Map Size:\tX: %d | Y: %d", mapSize_X, mapSize_Y);
 }
 

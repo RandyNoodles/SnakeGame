@@ -34,8 +34,8 @@ typedef struct Food {
 
 		
 
-		location.x = rand() % ((mapSizeX - NO_FOOD_MARGIN) + NO_FOOD_MARGIN);
-		location.y = rand() % ((mapSizeY - NO_FOOD_MARGIN) + NO_FOOD_MARGIN);
+		location.x = rand() % (mapSizeX - (2 * NO_FOOD_MARGIN)) + NO_FOOD_MARGIN;
+		location.y = rand() % (mapSizeY - (2 * NO_FOOD_MARGIN)) + NO_FOOD_MARGIN;
 
 		int validLocationFound = TRUE;
 		//Location invalid if it intersects with the player
